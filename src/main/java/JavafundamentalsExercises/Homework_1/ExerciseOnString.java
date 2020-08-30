@@ -6,13 +6,12 @@ public class ExerciseOnString {
 
     /*String class exercise */
     //------------------------------------------------------------------------------
-
+    /*I create some examples to present the exersises*/
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Give a password");
         String password = sc.next();
         StringClassExersise(password);
-
     }
 
     //Validate a given password
@@ -30,17 +29,16 @@ public class ExerciseOnString {
                 cnt++;
             }
         }
-        if ((boolaray[4] && boolaray[5])) {
-            System.out.println("Strong password");
-            return;
-        }
-        if ((boolaray[2] && boolaray[5]) || (boolaray[3] && boolaray[5])) {
-            System.out.println("Password OK");
-
-        }
-        if (cnt < 3 || !boolaray[4]) {
+        if (cnt >= 3 && boolaray[4]) {
+            if (cnt == 6) {
+                System.out.println("Very strong password");
+            } else if (boolaray[2] || boolaray[3]) {
+                System.out.println("Password OK");
+            } else if (boolaray[5]) {
+                System.out.println("Strong password");
+            }
+        } else {
             System.out.println("Invalid password");
-            PrintPassCriteria();
         }
     }
 

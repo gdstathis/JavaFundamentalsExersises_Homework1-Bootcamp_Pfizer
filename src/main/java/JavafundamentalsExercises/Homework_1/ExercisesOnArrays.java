@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class ExercisesOnArrays {
     /*Exercises on arrays, collections*/
     /*------------------------------------------------------------*/
-
+    /*I create some examples to present the exersises*/
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> list = new ArrayList<Integer>();
@@ -16,9 +16,11 @@ public class ExercisesOnArrays {
         list.add(7);
         list.add(7);
         list.add(5);
-        System.out.println("The list that was created with prime numbers is");
+        System.out.println("Create list");
+        PrintList(list);
+        System.out.println("Print the list with prime numbers");
         CreatePrimeNumList(list);
-        System.out.println("The list without dublicates is:");
+        System.out.println("The initial list without dublicates is:");
         EliminateDublicatesFromList(list);
         PrintList(EliminateDublicatesFromList(list).stream().collect(Collectors.toList()));
         System.out.println("Give a number to reverse the digits of it");
@@ -28,15 +30,16 @@ public class ExercisesOnArrays {
         System.out.println("Give a word to check if it is symmetric word");
         System.out.println(CheckSymmetricWord(sc.next()));
         System.out.println("I will create a stack, I will check if stack is empty and then I push a number");
-        MyStack myStack=new MyStack();
-        System.out.println("Is stack empty?: "+myStack.isEmpty());
+        MyStack myStack = new MyStack();
+        System.out.println("Is stack empty?: " + myStack.isEmpty());
         myStack.push(3);
-        System.out.println("Push another number. Is stack empty? :"+myStack.isEmpty());
+        System.out.println("Push another number. Is stack empty? :" + myStack.isEmpty());
         myStack.pop();
-        System.out.println("Pop the stack. Is stack empty? : "+myStack.isEmpty());
+        System.out.println("Pop the stack. Is stack empty? : " + myStack.isEmpty());
         myStack.push(4);
         myStack.push(54);
-        System.out.println("Push 2 numbers and then peek the latest "+myStack.peek());
+        System.out.println("Push 2 numbers and then peek the latest " + myStack.peek());
+        System.out.println("The size of stack is: " + myStack.getSizeStack());
     }
 
 
